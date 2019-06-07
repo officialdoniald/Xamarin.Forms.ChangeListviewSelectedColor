@@ -9,7 +9,7 @@
             x:Name="PersonListView"
             ItemsSource="{Binding Names, Mode=TwoWay}" 
             HasUnevenRows="True" 
-            SelectedItem="{Binding SelectedName}"
+            SelectedItem="{Binding SelectedName, Mode=TwoWay}"
             ItemSelected="PersonListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
