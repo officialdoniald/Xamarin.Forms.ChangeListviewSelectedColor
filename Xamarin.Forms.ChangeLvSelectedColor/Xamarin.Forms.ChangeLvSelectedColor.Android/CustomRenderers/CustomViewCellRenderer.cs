@@ -28,15 +28,15 @@ namespace Xamarin.Forms.ChangeLvSelectedColor.Droid.CustomRenderers
 
             if (extendedViewCell.SelectedCellColor == ListViewSelectedBackGroundColor.CianBlue)
             {
-                AndroidEvents.OnAndroidThemeChangeNeeded_Event(null, Resource.Style.MainCianBlueTheme);
+                AndroidEvents.OnAndroidThemeChangeNeeded_Event(null, Xamarin.Forms.ChangeLvSelectedColor.Droid.Resource.Style.MainCianBlueTheme);
             }
             else if (extendedViewCell.SelectedCellColor == ListViewSelectedBackGroundColor.Normal)
             {
-                AndroidEvents.OnAndroidThemeChangeNeeded_Event(null, Resource.Style.MainTheme);
+                AndroidEvents.OnAndroidThemeChangeNeeded_Event(null, Xamarin.Forms.ChangeLvSelectedColor.Droid.Resource.Style.MainTheme);
             }
             else if (extendedViewCell.SelectedCellColor == ListViewSelectedBackGroundColor.Transparent)
             {
-                AndroidEvents.OnAndroidThemeChangeNeeded_Event(null, Resource.Style.MainTransparentTheme);
+                AndroidEvents.OnAndroidThemeChangeNeeded_Event(null, Xamarin.Forms.ChangeLvSelectedColor.Droid.Resource.Style.MainTransparentTheme);
             }
         }
     }
