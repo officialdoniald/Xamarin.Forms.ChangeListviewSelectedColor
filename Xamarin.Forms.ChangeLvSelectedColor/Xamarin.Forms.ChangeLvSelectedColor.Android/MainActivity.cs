@@ -1,10 +1,6 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace Xamarin.Forms.ChangeLvSelectedColor.Droid
@@ -19,7 +15,25 @@ namespace Xamarin.Forms.ChangeLvSelectedColor.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            AndroidEvents.OnAndroidThemeChangeNeeded += AndroidEvents_OnAndroidThemeChangeNeeded; ;
             LoadApplication(new App());
+        }
+
+        private void AndroidEvents_OnAndroidThemeChangeNeeded(object sender, int themeid)
+        {
+            RunOnUiThread(() => {
+                SetTheme(themeid);
+            });
+        }
+
+        public class AndroidEvents
+        {
+            public static event EventHandler<int> OnAndroidThemeChangeNeeded;
+
+            public static void OnAndroidThemeChangeNeeded_Event(object sender, int id)
+            {
+                OnAndroidThemeChangeNeeded?.Invoke(sender, id);
+            }
         }
     }
 }

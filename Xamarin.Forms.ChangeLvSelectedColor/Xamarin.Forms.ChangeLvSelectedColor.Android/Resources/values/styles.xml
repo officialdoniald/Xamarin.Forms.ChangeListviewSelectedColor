@@ -3,6 +3,10 @@
 
   <style name="MainTheme" parent="MainTheme.Base">
   </style>
+  <style name="MainCianBlueTheme" parent="MainCianBlueTheme.Base">
+  </style>
+  <style name="MainTransparentTheme" parent="MainTransparentTheme.Base">
+  </style>
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
@@ -22,6 +26,22 @@
     <item name="windowActionModeOverlay">true</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  </style>
+
+  <style name="MainCianBlueTheme.Base" parent="MainTheme">
+    <item name="android:colorPressedHighlight">@color/anlistviewSelection</item>
+    <item name="android:colorLongPressedHighlight">@color/anlistviewSelection</item>
+    <item name="android:colorFocusedHighlight">@color/anlistviewSelection</item>
+    <item name="android:colorActivatedHighlight">@color/anlistviewSelection</item>
+    <item name="android:activatedBackgroundIndicator">@color/anlistviewSelection</item>
+  </style>
+
+  <style name="MainTransparentTheme.Base" parent="MainTheme">
+    <item name="android:colorPressedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:colorLongPressedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:colorFocusedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:colorActivatedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:activatedBackgroundIndicator">@color/transparentlistviewSelection</item>
   </style>
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
